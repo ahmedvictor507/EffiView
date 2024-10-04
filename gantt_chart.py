@@ -17,14 +17,14 @@ def extract_data_from_api():
     # Header that provides authentication and content type
     headers_all_jobs_list = {
         # Authorization key (very important, share with authorized people only)
-        'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJOYW1lIjoiRGF0YSBSZXRyaWV2ZWwiLCJSZXZvY2F0aW9uSWQiOiJlYTJjNjQ2OS1lY2VjLTQ2ODQtYjlkNS01NDFiNGZlMmZjZjIiLCJleHAiOjE3NTEyMTI4MDAsImlzcyI6Im1laWJhbi5mdWxjcnVtcHJvLmNvbSIsImF1ZCI6Im1laWJhbiJ9.ariY2Q8msoV9lmYa2WHNb7nt5uC-yiERQvCdjRCmMuM',
+        'Authorization': 'Bearer copy authorization key here',
         'Content-Type': 'application/json-patch+json'
     }
 
     # Header that provides authentication and content type
     headers = {
         # Authorization key (very important, share with authorized people only)
-        'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJOYW1lIjoiRGF0YSBSZXRyaWV2ZWwiLCJSZXZvY2F0aW9uSWQiOiJlYTJjNjQ2OS1lY2VjLTQ2ODQtYjlkNS01NDFiNGZlMmZjZjIiLCJleHAiOjE3NTEyMTI4MDAsImlzcyI6Im1laWJhbi5mdWxjcnVtcHJvLmNvbSIsImF1ZCI6Im1laWJhbiJ9.ariY2Q8msoV9lmYa2WHNb7nt5uC-yiERQvCdjRCmMuM',
+        'Authorization': 'Bearer copy authorization key here',
         'Content-Type': 'application/json'
     }
 
