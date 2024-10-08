@@ -72,7 +72,13 @@ def item_extract_efficiency(df):
 def item_graph_efficiency(df):
     try:
       df_item = item_extract_efficiency(df)
-      fig = px.bar(df_item, x='Make Item', y='Mean Efficiency', color='Make Item',
+
+      fig = px.bar(df_item,
+                   x='Make Item',
+                   y='Mean Efficiency',
+                   color='Make Item',
+                   title='Average Item Efficiency',
+                   text='Mean Efficiency',
                    hover_data={'Make Item': True,
                                'Make Item Description': True,
                                'Item Category': True})
