@@ -1,0 +1,2 @@
+Run 'my_tinker_app.py' to run the executable file
+Note: To generate the Gantt chart, ensure you have the authorization key. Copy and paste the key into the 'Authorization' field in the request headers.
