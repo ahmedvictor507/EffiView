@@ -17,14 +17,14 @@ def extract_data_from_api():
     # Header that provides authentication and content type
     headers_all_jobs_list = {
         # Authorization key (very important, share with authorized people only)
-        'Authorization': 'Bearer copy authorization key here',
+        'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJOYW1lIjoiRGF0YSBSZXRyaWV2ZWwiLCJSZXZvY2F0aW9uSWQiOiJlYTJjNjQ2OS1lY2VjLTQ2ODQtYjlkNS01NDFiNGZlMmZjZjIiLCJleHAiOjE3NTEyMTI4MDAsImlzcyI6Im1laWJhbi5mdWxjcnVtcHJvLmNvbSIsImF1ZCI6Im1laWJhbiJ9.ariY2Q8msoV9lmYa2WHNb7nt5uC-yiERQvCdjRCmMuM',
         'Content-Type': 'application/json-patch+json'
     }
 
     # Header that provides authentication and content type
     headers = {
         # Authorization key (very important, share with authorized people only)
-        'Authorization': 'Bearer copy authorization key here',
+        'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJOYW1lIjoiRGF0YSBSZXRyaWV2ZWwiLCJSZXZvY2F0aW9uSWQiOiJlYTJjNjQ2OS1lY2VjLTQ2ODQtYjlkNS01NDFiNGZlMmZjZjIiLCJleHAiOjE3NTEyMTI4MDAsImlzcyI6Im1laWJhbi5mdWxjcnVtcHJvLmNvbSIsImF1ZCI6Im1laWJhbiJ9.ariY2Q8msoV9lmYa2WHNb7nt5uC-yiERQvCdjRCmMuM',
         'Content-Type': 'application/json'
     }
 
@@ -211,6 +211,11 @@ def process_df(df_job, df_op):
 
     # Concatenate the two DataFrames (df_api_copy and df_op_copy1) into one DataFrame and reset the index
     df_combined = pd.concat([df_api_copy, df_op_copy1], ignore_index=True)
+
+    # Use regex to remove non-numeric characters from "Sales Order" and "Job"
+    df_combined["Sales Order"] = df_combined["Sales Order"].astype(str).str.extract(r'(\d+)').astype(float)
+    df_combined["Job"] = df_combined["Job"].astype(str).str.extract(r'(\d+)').astype(float)
+
     # Sort the combined DataFrame by the "Job" column to ensure all data is ordered by job numbers
     df_combined = df_combined.sort_values(by="Job")
 

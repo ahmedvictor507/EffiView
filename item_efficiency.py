@@ -23,13 +23,15 @@ def item_extract_efficiency(df):
     df['Actual Total Hours'] = df['Actual Total Hours'] / df['Estimated Make Quantity']
 
     categories = {
+        'MOE': ['millout', 'moe'],
         'TBR': ['tbr', 'ext', 'tieback',  'extension', 'extensions'],
         'BODY': ['body', 'bodies', ],
-        'MANDREL': ['mandrel', 'mandrels', 'mandrel', 'mandrels', 'mandrels', 'mandrels', 'mndrel', 'mdrl'],
-        'PBR': ['PBR', 'flow coupling', 'blast joint', 'polished', 'bore'],
+        'MANDREL': ['mandrel', 'mandrels', 'mandrel', 'mandrels', 'mandrels', 'mandrels', 'mndrel', 'mdrl', 'MNDRL'],
+        'PBR': ['PBR', 'polished', 'bore'],
+        'Flow Coupling': ['flow coupling'],
+        'Blast Joint': ['blast joint'],
         'CROSSOVER': ['crossover', 'crossovers', 'crossovers', 'crossovers', 'crossovers', 'crossovers', 'xover',
-                      'sub'],
-        'MOE': ['millout', 'moe']
+                      'sub']
     }
 
     def categorize(description):
