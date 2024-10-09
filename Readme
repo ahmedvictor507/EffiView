@@ -1,5 +1,7 @@
 The Executable file can be found in the build folder
+
 Run 'my_tinker_app.py' to run the executable file
+
 To save the executable file run this command on the terminal: & "C:\Users\(Replace with User Name)\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\Local-Packages\Python39\Scripts\pyinstaller.exe"--onefile --windowed --hidden-import=plotly my_tkinter_app.py
 
 
