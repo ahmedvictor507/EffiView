@@ -28,8 +28,8 @@ def item_extract_efficiency(df):
         'BODY': ['body', 'bodies', ],
         'MANDREL': ['mandrel', 'mandrels', 'mandrel', 'mandrels', 'mandrels', 'mandrels', 'mndrel', 'mdrl', 'MNDRL'],
         'PBR': ['PBR', 'polished', 'bore'],
-        'Flow Coupling': ['flow coupling'],
-        'Blast Joint': ['blast joint'],
+        'FLOW COUPLING': ['flow coupling'],
+        'BLAST JOINT': ['blast joint'],
         'CROSSOVER': ['crossover', 'crossovers', 'crossovers', 'crossovers', 'crossovers', 'crossovers', 'xover',
                       'sub']
     }
@@ -40,7 +40,7 @@ def item_extract_efficiency(df):
               for keyword in keywords:
                   if keyword.lower() in description.lower():
                       return category
-          return 'Other Category'
+          return 'OTHER CATEGORY'
 
     df['Item Category'] = df['Make Item Description'].apply(categorize)
 
