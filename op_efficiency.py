@@ -52,10 +52,12 @@ def process_data_em(df_em):
                         'MUNIYAN PICHAIKARAN PREM KUMAR', 'Mustapha Kamall',
                         'PREM KUMAR MUNIYAN PICHAIKARAN', 'Ricky Anak Anthony Ginyan',
                         'SANTOSH KUMAR', 'Sujith Pillai', 'VEDAIYAN SINGARAVELU',
-                        'SHAHRIZAL BIN SAID', 'Vivek Lingapandi', 'Joseph Kulandai Stanislaus']
+                        'SHAHRIZAL BIN SAID', 'Vivek Lingapandi', 'Joseph Kulandai Stanislaus',
+                        'Nur Syafiq  Bin Kamal']
 
     # Remove leading and trailing whitespace from the 'Employee' column
     df_em['Employee'] = df_em['Employee'].str.strip()
+
     # Exclude employees that are in 'names_to_exclude'
     # If you want to do the opposite, create names to_include and delete '~' from this line
     df_em = df_em[~df_em['Employee'].isin(names_to_exclude)]

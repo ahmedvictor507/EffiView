@@ -65,10 +65,10 @@ def extract_idle_data(df_copy):
                         'SANTOSH KUMAR', 'Sujith Pillai', 'VEDAIYAN SINGARAVELU',
                         'SHAHRIZAL BIN SAID', 'Vivek Lingapandi', 'Joseph Kulandai Stanislaus',
                         'Ahmed Yasser Montasser', 'RABDUL  HAKIM BIN ISMAIL', 'MAICHAEL ANTONIRAJ',
-                        'Sawinder Singh']
+                        'Sawinder Singh', 'Nur Syafiq  Bin Kamal']
 
     # Remove leading and trailing whitespace from the 'Employee' column
-    # If you want to do the opposite, create names to_include and delete '~' from this line
+    # If you want to do the opposite, create names_to_include and delete '~' from this line
     df_copy = df_copy[~df_copy['Team Member'].isin(names_to_exclude)]
 
     # Create a function to check whether the Team Member has worked overtime or not
